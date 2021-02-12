@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
+import { About, Landing, Nav, Projects, Experience } from "./components";
+import theme from "./theme";
+
+const GlobalStyles = createGlobalStyle`
+    body {
+      background-color: ${(props) => props.theme.bg.main}
+    } 
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Router>
+        <Nav />
+        <Switch>
+          <Route exact path="/">
+            <Landing />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/projects">
+            <Projects />
+          </Route>
+          <Route exact path="/experience">
+            <Experience />
+          </Route>
+        </Switch>
+      </Router>
+    </ThemeProvider>
   );
 }
 
