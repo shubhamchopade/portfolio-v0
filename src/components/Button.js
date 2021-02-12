@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const Button = ({ to, text }) => {
+export const Button = ({ to, text, margin, str, fil, height }) => {
   return (
-    <ButtonWrapper>
+    <ButtonWrapper margin={margin} str={str} fil={fil}>
       <StyledLink to={to}>
         {text ? text : "Button"}{" "}
         <svg
@@ -50,8 +50,13 @@ export const Button = ({ to, text }) => {
   );
 };
 
-const ButtonWrapper = styled.div`
+const ButtonWrapper = styled.div.attrs({})`
   max-width: 20rem;
+  transition: 1s;
+  transform: translateX(-200px);
+  transform: ${(props) => props.str === 100 && "translateX(0px)"};
+  margin: ${(props) => (props.margin ? props.margin : "0")};
+  height: ${(props) => (props.height ? props.height : "auto")};
 `;
 
 const StyledLink = styled(Link)`

@@ -26,7 +26,6 @@ export const Landing = () => {
       <Slider />
       {/* <ScrollAnimation /> */}
       <ScrollText />
-      <Button to="/about" text="Hire Me" />
     </LandingWrapper>
   );
 };
