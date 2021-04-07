@@ -4,3 +4,4 @@ export * from "./Information";
 export * from "./Projects";
 export * from "./About";
 export * from "./Experience";
+export * from "./Footer";
