@@ -1,3 +1,7 @@
+import { ProjectComponent } from "./ProjectComponent"
+
 export const Projects = () => {
-  return <div>Projects</div>;
+  return <div>
+    <ProjectComponent />
+  </div>;
 };

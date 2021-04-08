@@ -141,9 +141,6 @@ const Text = styled.div`
     @media ${(props) => props.theme.breakpoints.tablet} {
       font-size: 1rem;
     }
-    @media ${(props) => props.theme.breakpoints.mobile} {
-      font-size: 1rem;
-    }
   }
 `;
 const SlidingText = styled(motion.p).attrs({
