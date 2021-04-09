@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import { About, Landing, Nav, Projects, Experience } from "./components";
+import { TheBookPundits } from "./components/project-pages/TheBookPundits";
 import theme from "./theme";
 
 const GlobalStyles = createGlobalStyle`
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route exact path="/experience">
             <Experience />
+          </Route>
+          <Route exact path="/thebookpundits">
+            <TheBookPundits />
           </Route>
         </Switch>
       </Router>

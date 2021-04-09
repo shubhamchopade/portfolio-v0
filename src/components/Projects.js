@@ -1,7 +1,7 @@
-import { ProjectComponent } from "./ProjectComponent"
+import { ProjectComponent, Project } from "./ProjectComponent"
 
 export const Projects = () => {
-  return <div>
-    <ProjectComponent />
+  return <div className='margin'>
+    <Project />
   </div>;
 };

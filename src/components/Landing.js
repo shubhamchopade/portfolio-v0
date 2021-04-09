@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { Popup } from "./Common";
 import { Footer } from "./Footer";
+import { Projects } from "./Projects";
 import { ScrollText } from "./ScrollText";
 import { Slider } from "./Slider";
 
@@ -23,14 +24,15 @@ export const Landing = () => {
       </HeroText>
 
       <Slider />
-      {/* <ScrollAnimation /> */}
+      <Projects />
       <ScrollText />
       <Footer />
     </LandingWrapper>
   );
 };
 
-const LandingWrapper = styled.section``;
+const LandingWrapper = styled.section`
+`;
 const HeroText = styled.p`
   font-size: 4rem;
   max-width: 70rem;

@@ -30,3 +30,72 @@ export const Popup = styled.p`
     border-bottom: 20px solid ${(props) => props.theme.bg.secondary};
   }
 `;
+
+/*
+  Project Common Components
+    1. Header = Image + Text Block
+    2. List Pointers - Outcomes
+    3. Responsive Image - captions
+    4. Text block - with Heading
+    5. Tech Stack
+    6. Testimonial
+*/
+
+export const Logo = styled.img`
+  width: 8rem;
+  height: 8rem;
+`
+export const Cover = styled.img`
+  width: 30rem;
+  border-radius: 0.5rem;
+
+    @media ${props => props.theme.breakpoints.tablet}{
+    width: 100%;
+  }
+`
+export const Image = styled.img`
+  width: 100%;
+  border-radius: 0.5rem;
+  margin: 4rem auto;
+`
+export const TextBlock = styled.p`
+  font-size: 1.3rem;
+  color: ${({ theme }) => theme.text.secondary};
+  line-height: 150%;
+`
+export const TextBlockHeading = styled(TextBlock)`
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+`
+export const Heading = styled.h1`
+  font-weight: normal;
+  line-height: 100%;
+  color: ${({ theme }) => theme.text.main};
+`
+export const Flex = styled.div`
+  display: flex;
+  justify-content: ${props => props.justifyContent ? props.justifyContent : 'unset'};
+  align-items: ${props => props.alignItems ? props.alignItems : 'unset'};
+  margin: 4rem auto;
+
+  @media ${props => props.theme.breakpoints.mobile}{
+    flex-direction: column;
+  }
+`
+export const SVG = styled.svg`
+  width: 100%;
+
+  .react-icon:hover{
+    fill: #00D1F7;
+  }
+  .firebase-icon:hover{
+    fill: #FFCB2E;
+  }
+  .styled-icon:hover{
+    fill: #D66C8E;
+  }
+  .tailwindcss-icon:hover{
+    fill: #15B7C4;
+  }
+`

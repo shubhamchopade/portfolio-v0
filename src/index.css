@@ -26,3 +26,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.margin-xs {
+  margin: 1rem auto;
+}
+.margin-sm {
+  margin: 2rem auto;
+}
+.margin-md {
+  margin: 3rem auto;
+}
+.margin-xl {
+  margin: 4rem auto;
+}
+.container {
+  margin: 0 auto;
+}
