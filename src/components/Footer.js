@@ -7,19 +7,20 @@ import { useState } from "react"
 
 
 export const Footer = () => {
-    const [hovered, setHovered] = useState(false)
-    return (
-        <Container>
-            <h3>developed and designed by <Underlined onMouseEnter={() => setHovered(true)}
-                onClick={() => setHovered((prev) => !prev)}
-                onMouseLeave={() => setHovered(false)}>me{hovered && <Popup>shubham chopade &#169; {new Date().getFullYear()}</Popup>}</Underlined></h3>
-            <div>
-                <img src={linkedin} />
-                <img src={instagram} />
-                <img src={github} />
-                <img src={codepen} />
-            </div>
-        </Container>)
+  const [hovered, setHovered] = useState(false)
+  return (
+    <Container>
+      <h3>developed and designed by <Underlined onMouseEnter={() => setHovered(true)}
+        onClick={() => setHovered((prev) => !prev)}
+        onMouseLeave={() => setHovered(false)}>me{hovered && <Popup>shubham chopade &#169; {new Date().getFullYear()}</Popup>}</Underlined></h3>
+      <div>
+        <img src={linkedin} />
+        <img src={instagram} />
+        <img src={github} />
+        <img src={codepen} />
+      </div>
+    </Container>
+  )
 }
 
 const Container = styled.section`
@@ -27,12 +28,17 @@ const Container = styled.section`
     width: 100%;
     justify-content: space-around;
     align-items: center;
-    margin-top: 4rem;
+    margin: 2rem auto;
+
+            @media ${(props) => props.theme.breakpoints.tablet} {
+         flex-direction: column;
+    }
 
     div {
         display: flex;
         justify-content: space-between;
         width: 10rem;
+        margin-bottom: 2rem;
 
         img {
             width: 25px;
@@ -74,26 +80,27 @@ const Popup = styled.p`
   font-size: 1rem;
   padding: 0.8rem;
   line-height: 100%;
-  width: 12.5rem;
+  width: 14rem;
   position: absolute;
-  bottom: 20px;
-  left: -15px;
+  bottom: 40px;
+  left: -70px;
   border-radius: 2px;
   background-color: ${(props) => props.theme.bg.secondary};
   color: ${(props) => props.theme.text.main};
   z-index: 10;
 
-  @media ${(props) => props.theme.breakpoints.tablet} {
+  /* @media ${(props) => props.theme.breakpoints.tablet} {
     top: 40px;
   }
   @media ${(props) => props.theme.breakpoints.mobile} {
     top: 30px;
-  }
+  } */
 
   &::before {
     content: "";
     position: absolute;
     bottom: -10px;
+    left: 60px;
     width: 0;
     height: 0;
     border-left: 20px solid transparent;

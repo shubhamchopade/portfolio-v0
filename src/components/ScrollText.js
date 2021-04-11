@@ -1,7 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import {
-  motion,
-  useSpring,
   useTransform,
   useViewportScroll,
 } from "framer-motion";
@@ -13,7 +11,6 @@ export const ScrollText = () => {
   const [isScrolled, setIsScrolled] = useState(0);
   const { scrollYProgress, scrollY } = useViewportScroll();
   const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
-  const pathLength = useSpring(yRange, { stiffness: 400, damping: 90 });
 
   const svgVariants = {
     hidden: {},
@@ -66,14 +63,15 @@ export const ScrollText = () => {
           </Text>
         </SVG>
       </Container>
-      <Button
-        height="50vh"
-        str={isScrolled}
-        fil={isComplete}
-        margin="0 auto"
-        to="/about"
-        text="Hire Me"
-      />
+      <div style={{ height: '30vh' }}>
+        <Button
+          str={isScrolled}
+          fil={isComplete}
+          margin="auto"
+          href="https://www.linkedin.com/in/shubham-chopade/"
+          text="Hire Me"
+        />
+      </div>
     </Wrapper>
   );
 };
@@ -86,10 +84,14 @@ const Container = styled.section`
 `;
 const SVG = styled.svg.attrs((props) => ({}))`
   position: sticky;
-  top: 50%;
+  top: 30%;
   left: 50%;
   width: 100%;
   margin: auto;
+
+  @media ${(props) => props.theme.breakpoints.mobile} {
+      top: 20%;
+  }
 `;
 const Text = styled.text.attrs((props) => ({
   strokeOpacity: props.str + "%",

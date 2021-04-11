@@ -7,7 +7,7 @@ export default {
   text: {
     main: "#C2AB8E",
     secondary: "#939D9C",
-    neutral: "#BAC99C",
+    neutral: "#777E88",
   },
   breakpoints: {
     mobile: "only screen and (max-width: 50rem)",

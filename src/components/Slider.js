@@ -129,7 +129,7 @@ const SliderWrapper = styled.section`
   margin: 0 auto;
   justify-content: space-around;
   align-items: center;
-  padding: 2rem;
+  margin: 2rem auto;
 `;
 const Text = styled.div`
   position: relative;
@@ -147,7 +147,7 @@ const SlidingText = styled(motion.p).attrs({
   originX: 0.5,
 })`
   position: absolute;
-  top: 80px;
+  top: 40px;
   font-size: 2.6rem;
   font-weight: bold;
   max-width: 50rem;
@@ -159,12 +159,12 @@ const SlidingText = styled(motion.p).attrs({
   @media ${(props) => props.theme.breakpoints.tablet} {
     width: 23rem;
     font-size: 3rem;
-    top: 40px;
+    top: 25px;
   }
   @media ${(props) => props.theme.breakpoints.mobile} {
     width: 15rem;
     font-size: 2rem;
-    top: 50px;
+    top: 30px;
   }
 `;
 const Shubham = styled.div`

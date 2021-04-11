@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const Popup = styled.p`
   padding: 0.6rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   width: 9rem;
   position: absolute;
-  top: 80px;
+  top: 100px;
   left: 0;
   border-radius: 2px;
   background-color: ${(props) => props.theme.bg.secondary};
@@ -13,10 +13,10 @@ export const Popup = styled.p`
   z-index: 10;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
-    top: 40px;
+    top: 60px;
   }
   @media ${(props) => props.theme.breakpoints.mobile} {
-    top: 30px;
+    top: 45px;
   }
 
   &::before {
@@ -59,14 +59,23 @@ export const Image = styled.img`
   margin: 4rem auto;
 `
 export const TextBlock = styled.p`
-  font-size: 1.3rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
   color: ${({ theme }) => theme.text.secondary};
   line-height: 150%;
+  margin: 1rem auto;
+
+    @media ${props => props.theme.breakpoints.mobile}{
+      font-size: 1rem;
+  }
 `
-export const TextBlockHeading = styled(TextBlock)`
-  text-transform: uppercase;
+export const TextBlockHeading = styled.h3`
+  text-transform: ${props => props.uppercase ? props.uppercase : 'unset'};
+  font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text.main};
 `
 export const Heading = styled.h1`
   font-weight: normal;

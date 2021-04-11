@@ -26,7 +26,7 @@ export default [
         heading: "Tailwind Gradients Tool",
         shortDescription: "An interactive tool for letting the developers choose gradient classes for tailwindCSS, a CSS framework. The users can generate a random gradient combination by pressing “Space”.",
         aboutLink: './tailwindgradient',
-        liveLink: 'https://thebookpundits.com'
+        liveLink: 'https://tailwindgradient.ml'
     },
     {
         id: 3,

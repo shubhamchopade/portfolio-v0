@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const Button = ({ to, text, margin, str, fil, height }) => {
+export const Button = ({ href, text, margin, str, fil, height }) => {
   return (
-    <ButtonWrapper margin={margin} str={str} fil={fil}>
-      <StyledLink to={to}>
+    <ButtonWrapper className='effect' margin={margin} str={str} fil={fil} height={height}>
+      <StyledLink href={href} target="_blank">
         {text ? text : "Button"}{" "}
         <svg
           width="38"
@@ -51,14 +50,14 @@ export const Button = ({ to, text, margin, str, fil, height }) => {
 
 const ButtonWrapper = styled.div.attrs({})`
   max-width: 20rem;
-  transition: 1s;
+  transition: transform 1s ease-in-out;
   transform: translateX(-200px);
   transform: ${(props) => props.str === 100 && "translateX(0px)"};
   margin: ${(props) => (props.margin ? props.margin : "0")};
   height: ${(props) => (props.height ? props.height : "auto")};
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -67,6 +66,10 @@ const StyledLink = styled(Link)`
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: bold;
+
+      @media ${(props) => props.theme.breakpoints.mobile} {
+        transform: scale(.8)
+    }
 
   &:hover {
     font-style: italic;

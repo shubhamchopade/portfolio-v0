@@ -11,7 +11,7 @@ export const Landing = () => {
   return (
     <LandingWrapper>
       <HeroText>
-        Hi, I am Shubham Chopade. An{" "}
+        Hi, I am Shubham Chopade. A{" "}
         <Utilitarian
           onMouseEnter={() => setHovered(true)}
           onClick={() => setHovered((prev) => !prev)}
@@ -36,7 +36,7 @@ const LandingWrapper = styled.section`
 const HeroText = styled.p`
   font-size: 4rem;
   max-width: 70rem;
-  width: 80%;
+  width: 90%;
   color: ${(props) => props.theme.text.main};
   margin: 0 auto;
   margin-top: 3rem;
