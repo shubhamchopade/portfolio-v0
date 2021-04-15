@@ -57,6 +57,11 @@ export const Image = styled.img`
   width: 100%;
   border-radius: 0.5rem;
   margin: 4rem auto;
+
+ &::before{
+   content: ${props => props.caption};
+   color: blue;
+ }
 `
 export const TextBlock = styled.p`
   font-family: 'Noto Sans JP', sans-serif;

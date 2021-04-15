@@ -27,7 +27,7 @@ export const TheBookPundits = () => {
 
             <TextBlockHeading>MY EXPERIENCE</TextBlockHeading>
             <TextBlock>Book Pundits is a book advertising company located in Chennai, India. Book Pundits is a book advertising company located in Chennai, India. Book Pundits is a book advertising company located in Chennai, India.</TextBlock>
-            <Image src={UX1} />
+            <Image caption='This is a caption' src={UX1} />
             <Image src={UX2} />
             <Image src={UX3} />
 
@@ -43,6 +43,7 @@ export const TheBookPundits = () => {
 }
 
 const Parent = styled.main`
+max-width: 70rem;
     width: 90%;
     margin: 2rem auto;
 

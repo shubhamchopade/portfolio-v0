@@ -9,17 +9,14 @@ import { Button } from "./Button";
 export const ScrollText = () => {
   const [isComplete, setIsComplete] = useState(false);
   const [isScrolled, setIsScrolled] = useState(0);
-  const { scrollYProgress, scrollY } = useViewportScroll();
-  const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
+  const { scrollY } = useViewportScroll();
 
   const svgVariants = {
     hidden: {},
     visible: {},
   };
 
-  useEffect(() => {
-    yRange.onChange((v) => setIsComplete(v >= 1));
-  }, [yRange]);
+
 
   useEffect(() => {
     window.addEventListener("scroll", (e) => {
@@ -33,8 +30,6 @@ export const ScrollText = () => {
       let scrolled = (winScroll / height) * 100;
 
       setIsScrolled(scrolled);
-      isScrolled === 100 && setIsComplete(true);
-
       console.log(scrolled, isComplete);
     });
   }, [scrollY]);

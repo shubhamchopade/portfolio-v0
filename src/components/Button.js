@@ -52,7 +52,7 @@ const ButtonWrapper = styled.div.attrs({})`
   max-width: 20rem;
   transition: transform 1s ease-in-out;
   transform: translateX(-200px);
-  transform: ${(props) => props.str === 100 && "translateX(0px)"};
+  transform: ${(props) => props.str > 99 && "translateX(0px)"};
   margin: ${(props) => (props.margin ? props.margin : "0")};
   height: ${(props) => (props.height ? props.height : "auto")};
 `;
