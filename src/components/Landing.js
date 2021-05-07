@@ -5,8 +5,6 @@ import { Footer } from "./Footer";
 import { Projects } from "./Projects";
 import { ScrollText } from "./ScrollText";
 import { Slider } from "./Slider";
-import resume from './assets/resume.pdf'
-import { PDFView } from "./PDFView";
 
 export const Landing = () => {
   const [hovered, setHovered] = useState(false);
@@ -27,15 +25,13 @@ export const Landing = () => {
 
       <Slider />
       <Projects />
-      <PDFView />
       <ScrollText />
       <Footer />
     </LandingWrapper>
   );
 };
 
-const LandingWrapper = styled.section`
-`;
+const LandingWrapper = styled.section``;
 const HeroText = styled.p`
   font-size: 4rem;
   max-width: 70rem;
