@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import resume from "../components/assets/ShubhamChopade_resume.pdf";
 
 export const Nav = () => {
   return (
@@ -8,7 +9,7 @@ export const Nav = () => {
         <Logo>SC</Logo>
       </Link>
       <Links>
-        <StyledLink href="https://drive.google.com/file/d/1e9D8WuOLp4r0LCoe318i6tVp5uPgitE1/view?usp=sharing" target="_blank"><span>Resume</span> <svg width="56" height="51" viewBox="0 0 56 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <StyledLink href={resume} target="_blank"><span>Resume</span> <svg width="56" height="51" viewBox="0 0 56 51" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M28 33L38 23M28 33V3V33ZM28 33L18 23L28 33Z" stroke="#A0A0A0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
           <path d="M3 38L4.5525 44.2125C4.82288 45.2942 5.44706 46.2545 6.32583 46.9407C7.20459 47.627 8.28752 47.9998 9.4025 48H46.5975C47.7125 47.9998 48.7954 47.627 49.6742 46.9407C50.5529 46.2545 51.1771 45.2942 51.4475 44.2125L53 38" stroke="#A0A0A0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
         </svg>

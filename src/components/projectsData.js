@@ -9,7 +9,7 @@ export default [
     img: bookPunditsImg,
     heading: "The Book Pundits - Connecting Authors & Influencers",
     shortDescription:
-      "Book Pundits are a book advertising company located in Chennai, India. Book Pundits are a book advertising company located in Chennai, India. Book Pundits are a book advertising company located in Chennai, India.",
+      "Book Pundits is a Book Campaign Platform. Their motto is to connect Authors with their niche readers and reliable authentic influencers.",
     aboutLink: "./thebookpundits",
     liveLink: "https://thebookpundits.com",
   },
@@ -18,7 +18,7 @@ export default [
     img: techSapienImg,
     heading: "Tech Sapien - An interactive blog to learn web development",
     shortDescription:
-      "Tech sapien is a community targeted towards the programmers who strive for efficiency. The mind behind tech sapien is Shubham Chopade. He is a motivated individual whose passion is teaching. Visit the blog for more information.",
+      "Tech Sapien is a blog focused on providing the best knowledge on web development. A platform where you can find tips and tricks related to web development.",
     aboutLink: "./techsapien",
     liveLink: "https://techsapien.dev",
   },
@@ -38,6 +38,6 @@ export default [
     shortDescription:
       "Well this is also a long awaited project that I have been working for quite some time now. Find my design and development process alongwith. This website went through many modifications over the time. Here is the latest one. Hope you enjoy it.",
     aboutLink: "./portfolio",
-    liveLink: "https://shubhamchopade.ml",
+    liveLink: "https://shubhamchopade.com",
   },
 ];
