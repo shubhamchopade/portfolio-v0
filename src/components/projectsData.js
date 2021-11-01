@@ -27,9 +27,9 @@ export default [
     img: tailwindGradientsImg,
     heading: "Tailwind Gradients Tool",
     shortDescription:
-      "An interactive tool for letting the developers choose gradient classes for tailwindCSS, a CSS framework. The users can generate a random gradient combination by pressing “Space”.",
+      "An interactive tool for letting the developers generate custom color palettes for tailwindCSS, a CSS framework. The users can also preview dynamically generated gradients (in progress).",
     aboutLink: "./tailwindgradient",
-    liveLink: "https://tailwindgradient.ml",
+    liveLink: "https://tailwind.ml",
   },
   {
     id: 3,
