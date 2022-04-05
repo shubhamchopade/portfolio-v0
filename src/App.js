@@ -6,6 +6,8 @@ import { TailwindGradient } from "./components/project-pages/TailwindGradient";
 import { TechSapien } from "./components/project-pages/TechSapien";
 import { TheBookPundits } from "./components/project-pages/TheBookPundits";
 import theme from "./theme";
+import ReactGA from "react-ga";
+import RouteChangeTracker from "./components/RouterGoogleAnalytics";
 
 const GlobalStyles = createGlobalStyle`
     body {
@@ -14,6 +16,8 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 function App() {
+  const TRACKING_ID = "G-FG85HY89KP"; // YOUR_OWN_TRACKING_ID
+  ReactGA.initialize(TRACKING_ID);
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
@@ -45,6 +49,7 @@ function App() {
             <Portfolio />
           </Route>
         </Switch>
+        <RouteChangeTracker />
       </Router>
     </ThemeProvider>
   );
