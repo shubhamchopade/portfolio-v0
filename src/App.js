@@ -14,10 +14,10 @@ const GlobalStyles = createGlobalStyle`
       background-color: ${(props) => props.theme.bg.main}
     } 
 `;
+const TRACKING_ID = "G-FG85HY89KP"; // YOUR_OWN_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
-  const TRACKING_ID = "G-FG85HY89KP"; // YOUR_OWN_TRACKING_ID
-  ReactGA.initialize(TRACKING_ID);
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
