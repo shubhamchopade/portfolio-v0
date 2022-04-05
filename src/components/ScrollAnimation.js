@@ -35,7 +35,7 @@ export const ScrollAnimation = () => {
     });
   }, [scrollY]);
 
-  console.log(isComplete, yRange);
+  // console.log(isComplete, yRange);
   return (
     <ScrollWrapper>
       <SVG

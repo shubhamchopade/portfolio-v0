@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useEffect } from "react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import { About, Landing, Nav, Projects, Experience } from "./components";
 import { Portfolio } from "./components/project-pages/Portfolio";
@@ -18,6 +19,10 @@ const TRACKING_ID = "G-FG85HY89KP"; // YOUR_OWN_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 
 function App() {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />

@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-  useTransform,
-  useViewportScroll,
-} from "framer-motion";
+import { useTransform, useViewportScroll } from "framer-motion";
 import styled from "styled-components";
 import { Button } from "./Button";
 
@@ -16,8 +13,6 @@ export const ScrollText = () => {
     visible: {},
   };
 
-
-
   useEffect(() => {
     window.addEventListener("scroll", (e) => {
       let winScroll =
@@ -30,7 +25,7 @@ export const ScrollText = () => {
       let scrolled = (winScroll / height) * 100;
 
       setIsScrolled(scrolled);
-      console.log(scrolled, isComplete);
+      // console.log(scrolled, isComplete);
     });
   }, [scrollY]);
 
@@ -58,7 +53,7 @@ export const ScrollText = () => {
           </Text>
         </SVG>
       </Container>
-      <div style={{ height: '30vh' }}>
+      <div style={{ height: "30vh" }}>
         <Button
           str={isScrolled}
           fil={isComplete}
@@ -85,7 +80,7 @@ const SVG = styled.svg.attrs((props) => ({}))`
   margin: auto;
 
   @media ${(props) => props.theme.breakpoints.mobile} {
-      top: 20%;
+    top: 20%;
   }
 `;
 const Text = styled.text.attrs((props) => ({
