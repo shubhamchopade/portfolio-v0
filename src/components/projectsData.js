@@ -29,7 +29,7 @@ export default [
     shortDescription:
       "An interactive tool for letting the developers generate custom color palettes for tailwindCSS, a CSS framework. The users can also preview dynamically generated gradients (in progress).",
     aboutLink: "./tailwindgradient",
-    liveLink: "https://tailwind.ml",
+    liveLink: "https://tailwindconfig.netlify.app/",
   },
   {
     id: 3,
