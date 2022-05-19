@@ -14,17 +14,12 @@ export const Project = ({ children }) => {
         </TextBlock>
       </div>
       <hr />
-      {projectsData.map((project) => {
-        const {
-          id,
-          img,
-          heading,
-          shortDescription,
-          aboutLink,
-          liveLink,
-        } = project;
+      {projectsData.map((project, key) => {
+        const { id, img, heading, shortDescription, aboutLink, liveLink } =
+          project;
         return (
           <ProjectComponent
+            key={key}
             id={id}
             img={img}
             heading={heading}
@@ -61,10 +56,15 @@ export const ProjectComponent = ({
         <LinksContainer>
           <Link to={aboutLink} className="btn-link effect">
             About
-        </Link>
-          <a href={liveLink} target="_blank" className="btn-link effect">
+          </Link>
+          <a
+            href={liveLink}
+            target="_blank"
+            className="btn-link effect"
+            rel="noreferrer"
+          >
             Check Live
-          <svg
+            <svg
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -85,20 +85,19 @@ export const ProjectComponent = ({
       </LocalContainer>
       <hr />
     </>
-
   );
 };
 
 const LocalContainer = styled.main`
-    margin: 2rem auto;
+  margin: 2rem auto;
 
-    &:hover a svg {
-      transform: translateX(2px);
-    }
-    &:hover a svg path {
-      fill: #FF8E00;
-    }
-`
+  &:hover a svg {
+    transform: translateX(2px);
+  }
+  &:hover a svg path {
+    fill: #ff8e00;
+  }
+`;
 
 const ProjectContainer = styled.div`
   display: flex;
@@ -130,10 +129,10 @@ const TextContainer = styled.div`
 `;
 
 const Wrapper = styled.section`
-    max-width: 70rem;
+  max-width: 70rem;
   width: 90%;
   margin: 2rem auto;
-  
+
   .color {
     color: ${(props) => props.theme.text.secondary};
   }
@@ -154,12 +153,11 @@ const Wrapper = styled.section`
     margin: 1rem 0;
     color: ${(props) => props.theme.text.neutral};
   }
-  hr{
-          border: 0;
+  hr {
+    border: 0;
     height: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-
   }
 `;
 
@@ -170,9 +168,9 @@ const LinksContainer = styled.div`
   margin-left: auto;
   max-width: 15rem;
 
-        @media ${(props) => props.theme.breakpoints.tablet} {
-  max-width: 12rem;
-    }
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    max-width: 12rem;
+  }
 
   .btn-link {
     display: flex;
@@ -183,8 +181,8 @@ const LinksContainer = styled.div`
     color: ${(props) => props.theme.text.secondary};
     text-decoration: none;
 
-      @media ${(props) => props.theme.breakpoints.tablet} {
-        font-size: 1rem;
+    @media ${(props) => props.theme.breakpoints.tablet} {
+      font-size: 1rem;
     }
 
     svg {
