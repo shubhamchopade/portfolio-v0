@@ -7,7 +7,7 @@ import { TailwindGradient } from "./components/project-pages/TailwindGradient";
 import { TechSapien } from "./components/project-pages/TechSapien";
 import { TheBookPundits } from "./components/project-pages/TheBookPundits";
 import theme from "./theme";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 import RouteChangeTracker from "./components/RouterGoogleAnalytics";
 
 const GlobalStyles = createGlobalStyle`
@@ -15,12 +15,12 @@ const GlobalStyles = createGlobalStyle`
       background-color: ${(props) => props.theme.bg.main}
     } 
 `;
-const TRACKING_ID = "G-FG85HY89KP"; // YOUR_OWN_TRACKING_ID
+const TRACKING_ID = "G-1MJPBQSZWF"; // YOUR_OWN_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 
 function App() {
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.send({ hitType: "pageview", page: "/app" });
   }, []);
 
   return (

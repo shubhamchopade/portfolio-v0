@@ -1,3 +1,4 @@
+import ReactGA from "react-ga4";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import resume from "../components/assets/ShubhamChopade_resume.pdf";
@@ -9,7 +10,13 @@ export const Nav = () => {
         <Logo>SC</Logo>
       </Link>
       <Links>
-        <StyledLink href={resume} target="_blank">
+        <StyledLink
+          onClick={() => {
+            ReactGA.send({ hitType: "downloadResume", page: "/nav" });
+          }}
+          href={resume}
+          target="_blank"
+        >
           <span>Resume</span>{" "}
           <svg
             width="56"
