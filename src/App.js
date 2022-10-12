@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import { About, Landing, Nav, Projects, Experience } from "./components";
