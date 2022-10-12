@@ -70,7 +70,7 @@ const Wrapper = styled.main`
   margin: 3rem 0;
 `;
 const Container = styled.section`
-  height: 200vh;
+  height: 100vh;
 `;
 const SVG = styled.svg.attrs((props) => ({}))`
   position: sticky;
