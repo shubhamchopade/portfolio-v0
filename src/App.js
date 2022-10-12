@@ -10,6 +10,7 @@ import theme from "./theme";
 import ReactGA from "react-ga4";
 import { Nav } from "./components/header/Nav";
 import { Landing } from "./components/Landing";
+import ScrollToTop from "./components/common/ScrollToTop";
 
 
 const GlobalStyles = createGlobalStyle`
@@ -29,6 +30,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <BrowserRouter>
+        <ScrollToTop />
         <Nav />
         <Routes>
           <Route path="/" element={<Landing />} />

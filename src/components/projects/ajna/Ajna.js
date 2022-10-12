@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Cover, Flex, Heading, Logo, TextBlock, TextBlockHeading } from '../../common/Common'
 import tailwindGradientsImg from './assets/cover.svg'
 import firstImg from './assets/ajna1.png'
@@ -10,6 +10,8 @@ import seventhImg from './assets/ajna7.png'
 import eigthImg from './assets/ajna8.png'
 import styled from 'styled-components'
 import BackButton from '../../common/BackButton'
+
+
 
 export const Ajna = () => {
     return (
