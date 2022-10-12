@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { TextBlock, TextBlockHeading } from "./Common";
+import { TextBlock, TextBlockHeading } from "../common/Common";
 import projectsData from "./projectsData";
 
 export const Project = ({ children }) => {

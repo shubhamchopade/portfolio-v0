@@ -1,10 +1,10 @@
 import React from 'react'
-import { Cover, Flex, Heading, Logo, TextBlock, TextBlockHeading } from '../Common'
-import tailwindGradientsImg from '../assets/projects/tailwind-gradient/cover.png'
-import firstImg from '../assets/projects/tailwind-gradient/images/tw1.png'
-import secondImg from '../assets/projects/tailwind-gradient/images/tw2.png'
-import thirdImg from '../assets/projects/tailwind-gradient/images/tw3.png'
-import forthImg from '../assets/projects/tailwind-gradient/images/tw4.png'
+import { Cover, Flex, Heading, Logo, TextBlock, TextBlockHeading } from '../../common/Common'
+import tailwindGradientsImg from './assets/cover.png'
+import firstImg from './assets/tw1.png'
+import secondImg from './assets/tw2.png'
+import thirdImg from './assets/tw3.png'
+import forthImg from './assets/tw4.png'
 import styled from 'styled-components'
 import { motion } from "framer-motion"
 

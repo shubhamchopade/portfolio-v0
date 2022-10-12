@@ -14,11 +14,11 @@ export const Footer = () => {
         onClick={() => setHovered((prev) => !prev)}
         onMouseLeave={() => setHovered(false)}>me{hovered && <Popup>shubham chopade &#169; {new Date().getFullYear()}</Popup>}</Underlined></h3>
       <div>
-        <a href="https://www.linkedin.com/in/shubham-chopade/" target="_blank">        <img src={linkedin} />
+        <a href="https://www.linkedin.com/in/shubham-chopade/" target="_blank" rel="noreferrer">        <img src={linkedin} />
         </a>
-        <a href="https://www.instagram.com/tech.sapien/" target="_blank"><img src={instagram} /></a>
-        <a href="https://github.com/shubhamchopade" target="_blank"><img src={github} /></a>
-        <a href="https://codepen.io/shubhamchopade" target="_blank"><img src={codepen} /></a>
+        <a href="https://www.instagram.com/tech.sapien/" target="_blank" rel="noreferrer"><img src={instagram} /></a>
+        <a href="https://github.com/shubhamchopade" target="_blank" rel="noreferrer"><img src={github} /></a>
+        <a href="https://codepen.io/shubhamchopade" target="_blank" rel="noreferrer"><img src={codepen} /></a>
 
 
 

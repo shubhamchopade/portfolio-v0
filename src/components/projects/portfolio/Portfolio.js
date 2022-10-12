@@ -1,6 +1,6 @@
 import React from 'react'
-import { Flex, Heading, Logo, TextBlock} from '../Common'
-import portfolioImg from '../assets/projects/portfolio/cover.png'
+import { Flex, Heading, Logo, TextBlock } from '../../common/Common'
+import portfolioImg from './assets/cover.png'
 import styled from 'styled-components'
 
 export const Portfolio = () => {

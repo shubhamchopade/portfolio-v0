@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useTransform, useViewportScroll } from "framer-motion";
+import { useViewportScroll } from "framer-motion";
 import styled from "styled-components";
 import { Button } from "./Button";
 

@@ -1,8 +1,8 @@
-import bookPunditsImg from "././assets/projects/the-book-pundits/cover.png";
-import techSapienImg from "././assets/projects/tech-sapien/cover.png";
-import tailwindGradientsImg from "././assets/projects/tailwind-gradient/cover.png";
-import portfolioImg from "././assets/projects/portfolio/cover.png";
-import ajnaImg from "././assets/projects/ajna/cover.svg";
+import bookPunditsImg from "../projects/the-book-pundits/assets/cover.png";
+import techSapienImg from "../projects/techsapien/assets/cover.png";
+import tailwindGradientsImg from "../projects/tailwind-gradient/assets/cover.png";
+import portfolioImg from "../projects/portfolio/assets/cover.png";
+import ajnaImg from "../projects/ajna/assets/cover.svg";
 
 export default [
   {

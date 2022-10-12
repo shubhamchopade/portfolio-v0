@@ -1,15 +1,17 @@
-import { BrowserRouter as Router, Switch, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useEffect } from "react";
-import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
-import { About, Landing, Nav, Projects, Experience } from "./components";
-import { Portfolio } from "./components/project-pages/Portfolio";
-import { TailwindGradient } from "./components/project-pages/TailwindGradient";
-import { TechSapien } from "./components/project-pages/TechSapien";
-import { TheBookPundits } from "./components/project-pages/TheBookPundits";
-import { Ajna } from "./components/project-pages/Ajna";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
+import { Portfolio } from "./components/projects/portfolio/Portfolio";
+import { TailwindGradient } from "./components/projects/tailwind-gradient/TailwindGradient";
+import { TechSapien } from "./components/projects/techsapien/TechSapien";
+import { TheBookPundits } from "./components/projects/the-book-pundits/TheBookPundits";
+import { Ajna } from "./components/projects/ajna/Ajna";
 import theme from "./theme";
 import ReactGA from "react-ga4";
-import RouteChangeTracker from "./components/RouterGoogleAnalytics";
+import RouteChangeTracker from "./components/common/RouterGoogleAnalytics";
+import { Nav } from "./components/header/Nav";
+import { Landing } from "./components/Landing";
+
 
 const GlobalStyles = createGlobalStyle`
     body {
@@ -32,15 +34,6 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Landing />
-          </Route>
-          <Route exact path="/about">
-            <About />
-          </Route>
-          <Route exact path="/projects">
-            <Projects />
-          </Route>
-          <Route exact path="/experience">
-            <Experience />
           </Route>
           <Route exact path="/thebookpundits">
             <TheBookPundits />

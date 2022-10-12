@@ -1,10 +1,10 @@
 import React from 'react'
-import { Cover, Flex, Heading, Logo, TextBlock, TextBlockHeading } from '../Common'
-import techSapienImg from '../assets/projects/tech-sapien/cover.png'
-import firstImg from '../assets/projects/tech-sapien/1.png'
-import secondImg from '../assets/projects/tech-sapien/2.png'
-import thirdImg from '../assets/projects/tech-sapien/3.png'
-import techSapienLogo from '../assets/projects/tech-sapien/logo.svg'
+import { Cover, Flex, Heading, Logo, TextBlock, TextBlockHeading } from '../../common/Common'
+import techSapienImg from './assets/cover.png'
+import firstImg from './assets/1.png'
+import secondImg from './assets/2.png'
+import thirdImg from './assets/3.png'
+import techSapienLogo from './assets/logo.svg'
 import styled from 'styled-components'
 import { motion } from "framer-motion"
 

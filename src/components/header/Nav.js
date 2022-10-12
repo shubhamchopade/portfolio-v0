@@ -1,7 +1,7 @@
 import ReactGA from "react-ga4";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import resume from "../components/assets/ShubhamChopade_resume.pdf";
+import resume from "./assets/ShubhamChopade_resume.pdf";
 
 export const Nav = () => {
   return (
