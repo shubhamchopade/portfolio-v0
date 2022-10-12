@@ -5,6 +5,8 @@ import bookPunditsCover from '../assets/projects/the-book-pundits/cover.png'
 import UX1 from '../assets/projects/the-book-pundits/ux-1.png'
 import UX2 from '../assets/projects/the-book-pundits/ux-2.png'
 import UX3 from '../assets/projects/the-book-pundits/ux-3.png'
+import UX5 from '../assets/projects/the-book-pundits/cover_isometric.png'
+import UX4 from '../assets/projects/the-book-pundits/ux-4.png'
 import styled from 'styled-components'
 
 export const TheBookPundits = () => {
@@ -24,9 +26,11 @@ export const TheBookPundits = () => {
                     <TextBlock className='width-sm'>Book Pundits is a book advertising company located in Chennai, India. Book Pundits is a book advertising company located in Chennai, India. Book Pundits is a book advertising company located in Chennai, India.</TextBlock>
                 </div>
             </Flex>
+            <Image src={UX5} />
 
             <TextBlockHeading>MY EXPERIENCE</TextBlockHeading>
             <TextBlock>Book Pundits is a book advertising company located in Chennai, India. Book Pundits is a book advertising company located in Chennai, India. Book Pundits is a book advertising company located in Chennai, India.</TextBlock>
+            <Image src={UX4} style={{ width: 300 }} />
             <Image caption='This is a caption' src={UX1} />
             <Image src={UX2} />
             <Image src={UX3} />
