@@ -1,10 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Popup } from "./Common";
-import { Footer } from "./Footer";
-import { Projects } from "./Projects";
-import { ScrollText } from "./ScrollText";
-import { Slider } from "./Slider";
+
+import { Footer } from "./footer/Footer";
+import { ScrollText } from "./common/ScrollText";
+import { Slider } from "./slider/Slider";
+import { Project } from "./projects/ProjectComponent";
+import { Popup } from "./common/Common";
 
 export const Landing = () => {
   const [hovered, setHovered] = useState(false);
@@ -24,9 +25,8 @@ export const Landing = () => {
       </HeroText>
 
       <Slider />
-      <Projects />
+      <Project />
       <ScrollText />
-      <Footer />
     </LandingWrapper>
   );
 };

@@ -1,14 +1,18 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
-import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
-import { About, Landing, Nav, Projects, Experience } from "./components";
-import { Portfolio } from "./components/project-pages/Portfolio";
-import { TailwindGradient } from "./components/project-pages/TailwindGradient";
-import { TechSapien } from "./components/project-pages/TechSapien";
-import { TheBookPundits } from "./components/project-pages/TheBookPundits";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
+import { Portfolio } from "./components/projects/portfolio/Portfolio";
+import { TailwindGradient } from "./components/projects/tailwind-gradient/TailwindGradient";
+import { TechSapien } from "./components/projects/techsapien/TechSapien";
+import { TheBookPundits } from "./components/projects/the-book-pundits/TheBookPundits";
+import { Ajna } from "./components/projects/ajna/Ajna";
 import theme from "./theme";
 import ReactGA from "react-ga4";
-import RouteChangeTracker from "./components/RouterGoogleAnalytics";
+import { Nav } from "./components/header/Nav";
+import { Landing } from "./components/Landing";
+import ScrollToTop from "./components/common/ScrollToTop";
+import { Footer } from "./components/footer/Footer";
+
 
 const GlobalStyles = createGlobalStyle`
     body {
@@ -26,36 +30,19 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Router>
+      <BrowserRouter>
+        <ScrollToTop />
         <Nav />
-        <Switch>
-          <Route exact path="/">
-            <Landing />
-          </Route>
-          <Route exact path="/about">
-            <About />
-          </Route>
-          <Route exact path="/projects">
-            <Projects />
-          </Route>
-          <Route exact path="/experience">
-            <Experience />
-          </Route>
-          <Route exact path="/thebookpundits">
-            <TheBookPundits />
-          </Route>
-          <Route exact path="/techsapien">
-            <TechSapien />
-          </Route>
-          <Route exact path="/tailwindgradient">
-            <TailwindGradient />
-          </Route>
-          <Route exact path="/portfolio">
-            <Portfolio />
-          </Route>
-        </Switch>
-        <RouteChangeTracker />
-      </Router>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/thebookpundits" element={<TheBookPundits />} />
+          <Route path="/techsapien" element={<TechSapien />} />
+          <Route path="/tailwindgradient" element={<TailwindGradient />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/ajna" element={<Ajna />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
