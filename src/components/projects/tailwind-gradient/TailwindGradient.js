@@ -7,10 +7,12 @@ import thirdImg from './assets/tw3.png'
 import forthImg from './assets/tw4.png'
 import styled from 'styled-components'
 import { motion } from "framer-motion"
+import BackButton from '../../common/BackButton'
 
 export const TailwindGradient = () => {
     return (
         <Parent>
+            <BackButton />
             <Flex justifyContent='flex-end' alignItems='center'>
                 <div className='project-header'>
                     <Heading>Tailwind Gradients Tool</Heading>

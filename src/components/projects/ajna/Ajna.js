@@ -9,11 +9,12 @@ import sixthImg from './assets/ajna6.png'
 import seventhImg from './assets/ajna7.png'
 import eigthImg from './assets/ajna8.png'
 import styled from 'styled-components'
-import { motion } from "framer-motion"
+import BackButton from '../../common/BackButton'
 
 export const Ajna = () => {
     return (
         <Parent>
+            <BackButton />
             <Flex justifyContent='flex-end' alignItems='center'>
                 <div className='project-header'>
                     <Heading>Ajna - A home security experience</Heading>

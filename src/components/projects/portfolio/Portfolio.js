@@ -2,10 +2,12 @@ import React from 'react'
 import { Flex, Heading, Logo, TextBlock } from '../../common/Common'
 import portfolioImg from './assets/cover.png'
 import styled from 'styled-components'
+import BackButton from '../../common/BackButton'
 
 export const Portfolio = () => {
     return (
         <Parent>
+            <BackButton />
             <Flex justifyContent='flex-end' alignItems='center'>
                 <Logo src={portfolioImg} />
                 <div className='project-header'>

@@ -8,10 +8,12 @@ import UX3 from './assets/ux-3.png'
 import UX5 from './assets/cover_isometric.png'
 import UX4 from './assets/ux-4.png'
 import styled from 'styled-components'
+import BackButton from '../../common/BackButton'
 
 export const TheBookPundits = () => {
     return (
         <Parent>
+            <BackButton />
             <Flex justifyContent='flex-end' alignItems='center'>
                 <Logo src={bookPunditsLogo} />
                 <div className='project-header'>

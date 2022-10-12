@@ -7,10 +7,12 @@ import thirdImg from './assets/3.png'
 import techSapienLogo from './assets/logo.svg'
 import styled from 'styled-components'
 import { motion } from "framer-motion"
+import BackButton from '../../common/BackButton'
 
 export const TechSapien = () => {
     return (
         <Parent>
+            <BackButton />
             <Flex justifyContent='flex-end' alignItems='center'>
                 <Logo src={techSapienLogo} />
                 <div className='project-header'>
