@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { Portfolio } from "./components/projects/portfolio/Portfolio";
@@ -8,7 +8,6 @@ import { TheBookPundits } from "./components/projects/the-book-pundits/TheBookPu
 import { Ajna } from "./components/projects/ajna/Ajna";
 import theme from "./theme";
 import ReactGA from "react-ga4";
-import RouteChangeTracker from "./components/common/RouterGoogleAnalytics";
 import { Nav } from "./components/header/Nav";
 import { Landing } from "./components/Landing";
 
@@ -29,30 +28,17 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Router>
+      <BrowserRouter>
         <Nav />
-        <Switch>
-          <Route exact path="/">
-            <Landing />
-          </Route>
-          <Route exact path="/thebookpundits">
-            <TheBookPundits />
-          </Route>
-          <Route exact path="/techsapien">
-            <TechSapien />
-          </Route>
-          <Route exact path="/tailwindgradient">
-            <TailwindGradient />
-          </Route>
-          <Route exact path="/portfolio">
-            <Portfolio />
-          </Route>
-          <Route exact path="/ajna">
-            <Ajna />
-          </Route>
-        </Switch>
-        <RouteChangeTracker />
-      </Router>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/thebookpundits" element={<TheBookPundits />} />
+          <Route path="/techsapien" element={<TechSapien />} />
+          <Route path="/tailwindgradient" element={<TailwindGradient />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/ajna" element={<Ajna />} />
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
