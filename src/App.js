@@ -6,6 +6,7 @@ import { Portfolio } from "./components/project-pages/Portfolio";
 import { TailwindGradient } from "./components/project-pages/TailwindGradient";
 import { TechSapien } from "./components/project-pages/TechSapien";
 import { TheBookPundits } from "./components/project-pages/TheBookPundits";
+import { Ajna } from "./components/project-pages/Ajna";
 import theme from "./theme";
 import ReactGA from "react-ga4";
 import RouteChangeTracker from "./components/RouterGoogleAnalytics";
@@ -52,6 +53,9 @@ function App() {
           </Route>
           <Route exact path="/portfolio">
             <Portfolio />
+          </Route>
+          <Route exact path="/ajna">
+            <Ajna />
           </Route>
         </Switch>
         <RouteChangeTracker />

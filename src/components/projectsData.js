@@ -2,6 +2,7 @@ import bookPunditsImg from "././assets/projects/the-book-pundits/cover.png";
 import techSapienImg from "././assets/projects/tech-sapien/cover.png";
 import tailwindGradientsImg from "././assets/projects/tailwind-gradient/cover.png";
 import portfolioImg from "././assets/projects/portfolio/cover.png";
+import ajnaImg from "././assets/projects/ajna/cover.svg";
 
 export default [
   {
@@ -39,5 +40,13 @@ export default [
       "Well this is also a long awaited project that I have been working for quite some time now. Find my design and development process alongwith. This website went through many modifications over the time. Here is the latest one. Hope you enjoy it.",
     aboutLink: "./portfolio",
     liveLink: "https://shubhamchopade.com",
+  },
+  {
+    id: 4,
+    img: ajnaImg,
+    heading: "Ajna - Home Security Device",
+    shortDescription:
+      "One stop home security system which can detect the intrusion in one’s house and notify the owner with a high priority notification on smartphone. Also, to provide an inexpensive solution to the presently overwhelming available products.",
+    aboutLink: "./ajna",
   },
 ];
