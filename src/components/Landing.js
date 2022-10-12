@@ -27,7 +27,6 @@ export const Landing = () => {
       <Slider />
       <Project />
       <ScrollText />
-      <Footer />
     </LandingWrapper>
   );
 };
