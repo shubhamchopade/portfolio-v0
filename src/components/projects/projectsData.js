@@ -5,7 +5,15 @@ import portfolioImg from "../projects/portfolio/assets/cover.png";
 import ajnaImg from "../projects/ajna/assets/cover.svg";
 
 export default [
-
+  {
+    id: 0,
+    img: bookPunditsImg,
+    heading: "The Book Pundits - Connecting Authors & Influencers",
+    shortDescription:
+      "Book Pundits is a Book Campaign Platform. Their motto is to connect Authors with their niche readers and reliable authentic influencers.",
+    aboutLink: "./thebookpundits",
+    liveLink: "https://thebookpundits.com",
+  },
   {
     id: 1,
     img: techSapienImg,
@@ -24,24 +32,6 @@ export default [
     aboutLink: "./tailwindgradient",
     liveLink: "https://tailwindconfig.netlify.app/",
   },
-
-  {
-    id: 4,
-    img: ajnaImg,
-    heading: "Ajna - Home Security Device",
-    shortDescription:
-      "One stop home security system which can detect the intrusion in one’s house and notify the owner with a high priority notification on smartphone. Also, to provide an inexpensive solution to the presently overwhelming available products.",
-    aboutLink: "./ajna",
-  },
-  {
-    id: 0,
-    img: bookPunditsImg,
-    heading: "The Book Pundits - Connecting Authors & Influencers",
-    shortDescription:
-      "Book Pundits is a Book Campaign Platform. Their motto is to connect Authors with their niche readers and reliable authentic influencers.",
-    aboutLink: "./thebookpundits",
-    liveLink: "https://thebookpundits.com",
-  },
   {
     id: 3,
     img: portfolioImg,
@@ -51,4 +41,13 @@ export default [
     aboutLink: "./portfolio",
     liveLink: "https://shubhamchopade.com",
   },
+  {
+    id: 4,
+    img: ajnaImg,
+    heading: "Ajna - Home Security Device",
+    shortDescription:
+      "One stop home security system which can detect the intrusion in one’s house and notify the owner with a high priority notification on smartphone. Also, to provide an inexpensive solution to the presently overwhelming available products.",
+    aboutLink: "./ajna",
+  },
+
 ];
